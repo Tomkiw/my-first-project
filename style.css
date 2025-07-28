@@ -1,0 +1,48 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+
+}
+
+.burger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 760px) {
+    .burger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: -300px;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 0 10px 10 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s ease;
+        z-index: 99;
+    }
+
+
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    /* Прибирає точки в списку <li> */
+}
